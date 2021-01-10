@@ -22,7 +22,7 @@ def consolidate_cart(cart)
         :clearance => cart[:clearance],
         :count => 1
         }]
-        consolidated_array.push cart_item
+        consolidated_array.push(cart_item)
     end
   end
   return consolidated_array
