@@ -14,14 +14,15 @@ def consolidate_cart(cart)
   cart_item = find_item_by_name_in_collection(cart[:item], cart)
   cart_item.each do |items|
     if cart_item !== nil
-      consolidated_array[:count] += 1
+      cart_item[:count] += 1
     else
-      consolidated_array = [{
+      cart_item = [{
         :item => cart[:item],
         :price => cart[:price],
         :clearance => cart[:clearance],
         :count => 1
         }]
+        consolidated_array.push cart_item
     end
   end
   return consolidated_array
