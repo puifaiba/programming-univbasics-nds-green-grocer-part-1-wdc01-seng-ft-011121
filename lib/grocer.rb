@@ -1,7 +1,4 @@
 def find_item_by_name_in_collection(name, collection)
-  # Implement me first!
-  #
-  # Consult README for inputs and outputs
   collection.each_with_index do |items, index|
     if items[:item] == name
       return collection[index]
